@@ -10,32 +10,34 @@ var attend_class = prompt("true or false: you attend your 2 hour 8:00am class le
 if (attend_class.toUpperCase() === "T" || attend_class.toUpperCase === "yes") {
   var class_notes = prompt("This bodes well for you. True or False: You take notes");
   //Take notes
-  if (class_notes.toUpperCase === "F") {
-    var class_study = prompt("do you study, group study or party before the test? (S/G/P)");
-    switch(class_study) {
+  if (class_notes.toUpperCase === "T") {
+    var class_study = parseInt(prompt("how many hours did you study for the final test?"));
     //study-
-    case "S":
+    if (class_study >= 30) {
       alert("you get an A!");
-      break;
     //group study-
-    case 'G':
+  } else if (20 <= class_study < 30){
       alert("you get a B!");
-      break;
     //party-
-    case 'P':
+  }else if (10<= class_study < 20) {
       alert("you passed with a C!");
-      break;
-    default:
-      var class_study = prompt("Be sure to answer with an upper case letter. do you study, group study or party before the test? (S/G/P)");
+
+    } else if (1<= class_study < 10){
+      alert("you passed with a D!");
+    } else {
+      var class_study = prompt("Try again");
     }
   } else {   //no notes
-      var class_study = prompt("do you group study or party before the test? (G/P)")
+      var class_study = prompt("do you group study, party before the test, or sleep through life? (G/P/S)")
       switch(class_study) {
         case "G":
           alert("You passed with a B");
           break;
         case "P":
           alert("you just narrowly passed with a D");
+          break;
+        case "S":
+          alert("Ouch, you slept through life. Try this class again next summer.");
           break;
       }
   }
