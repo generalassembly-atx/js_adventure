@@ -29,7 +29,7 @@ We got a first-timer here! So you've come to check out what Austin has to offer,
 
 var userName = prompt("Welcome, to Austin, Texas! What is your name?");
 
-var doWhat = prompt("Hi, "+userName+" to get started, Let's keep to the basics, are you most interested in eating, exploring, or art? (Type: eating/exploring/art)");
+var doWhat = prompt("Hi "+userName+"! To get started, let's keep to the basics, are you most interested in eating, exploring, or art in Austin? (Type: eating/exploring/art)");
 
 // If you choose Eating
  if (doWhat === "eating" || doWhat === "Eating") {
@@ -53,15 +53,11 @@ var doWhat = prompt("Hi, "+userName+" to get started, Let's keep to the basics, 
       console.log("Great! You'll find what you need at Lady Bird Lake with a hike and bike trail that takes you around a piece the Colorado river.")
    } else if (explore === "picnic" || explore === "Picnic"){
       var picnic = prompt("Would you like some hilltop scenery, or a nice day at a park? (Type: hilltop/park)");
-      if (picnic === "hilltop" || picnic === "Hilltop") {
+      }if (picnic === "hilltop" || picnic === "Hilltop") {
         console.log("You are in for quite a treat! Head over to Mount Bonnell or the lookout point at Lake Austin and 360.")
       } else if (picnic === "park" || picnic === "Park") {
         console.log("Ah, take in that gorgeous skyline and enjoy your charcuterie platter at Zilker Park or Lady Bird Lake.");
-      }
-  }
-}
-  // If you choose Water
-  else if (explore === "water" || explore === "Water") {
+    } else if (explore === "water" || explore === "Water") {
       var water = prompt ("What's suits your style? A pool, hidden spot, or a lake? (Type: pool/spot/lake)");
       } if (water === "pool" || water === "Pool") {
         console.log("Ohhhhh man, you must go to Barton Springs Pool!");
@@ -69,8 +65,7 @@ var doWhat = prompt("Hi, "+userName+" to get started, Let's keep to the basics, 
         console.log("Well, maybe not super hidden, but try out McKinney Falls, you won't be dissapointed.");
       } else if (water === "lake" || water === "Lake") {
         console.log("Take your pick from Lake Austin or Lake Travis. Like jumping off cliffs? Choose Lake Travis.");
-      }
-   }
+  }
  }
  // If you choose Art
  else if (doWhat === "art" || doWhat === "Art") {
